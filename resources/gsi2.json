@@ -1,0 +1,24 @@
+[
+    {
+        "Create": {
+            "IndexName": "BicycleType-Price-index",
+            "KeySchema": [
+                {
+                    "AttributeName": "BicycleType",
+                    "KeyType": "HASH"
+                },
+                {
+                    "AttributeName": "Price",
+                    "KeyType": "RANGE"
+                }
+            ],
+            "Projection": {
+                "ProjectionType": "ALL"
+            },
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 1,
+                "WriteCapacityUnits": 1
+            }
+        }
+    }
+]
